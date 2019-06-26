@@ -1,0 +1,54 @@
+{
+    "name": "jagat/laravel-log-enhancer",
+    "description": "laravel-log-enhancer",
+    "keywords": [
+        "jagat",
+        "laravel-log-enhancer"
+    ],
+    "homepage": "https://github.com/jagat/laravel-log-enhancer",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jagat Karki",
+            "email": "jagat.kc34@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jagat\\LaravelLogEnhancer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jagat\\LaravelLogEnhancer\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jagat\\LaravelLogEnhancer\\LaravelLogEnhancerServiceProvider"
+            ],
+            "aliases": {
+                "LaravelLogEnhancer": "Jagat\\LaravelLogEnhancer\\LaravelLogEnhancerFacade"
+            }
+        }
+    }
+}
